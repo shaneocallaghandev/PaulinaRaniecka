@@ -1,0 +1,32 @@
+/* Full-bleed water photo with the quote on top */
+.statement {
+  position: relative;
+  padding: clamp(6rem, 14vw, 11rem) 0;
+  background-color: var(--water-deep);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  isolation: isolate;
+}
+
+.statement::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(28, 60, 64, 0.35), rgba(28, 60, 64, 0.55));
+}
+
+.statement .wave {
+  color: rgba(246, 243, 237, 0.7);
+}
+
+.statement__text {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.75rem, 3.6vw, 2.85rem);
+  line-height: 1.35;
+  color: var(--ivory);
+  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.2);
+}
